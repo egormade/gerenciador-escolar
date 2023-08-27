@@ -1,1 +1,1 @@
-# gerenciador-escolar
+# Student manager app
