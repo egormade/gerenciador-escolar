@@ -10,3 +10,6 @@ def signUp(request):
 
 def home(request):
     return render(request, 'home.html')
+
+def turmas(request):
+    return render(request, 'turmas.html')
