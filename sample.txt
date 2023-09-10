@@ -1,0 +1,70 @@
+# importar libraries necessárias
+from .models import Aluno
+from .models import Professor
+from .models import Turma
+import pandas as pd
+import smtplib
+import email.message
+import random
+
+
+# Gerando ra
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+           'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+           'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+ra = ""
+
+
+for i in range(1, 3):
+  ra += random.choice(letters)
+
+for i in range(1, 5):
+  ra += random.choice(numbers)
+
+# print(ra.upper())
+
+
+# Adicionando Aluno
+def alunos(request):
+    novo_aluno = Aluno()
+    novo_aluno.nomeAluno = ra.upper()
+    novo_aluno.raAluno = request.POST.get('raAluno')
+    novo_aluno.emailAluno = request.POST.get('emailAluno')
+    novo_aluno.nascAluno = request.POST.get('nascAluno')
+    
+    alunos = {
+        'alunos': Aluno.objects.all()
+    }
+
+    # Definir o render
+
+    return render(request, 'TEMPLATE_NAME', produtos)
+
+# Deletando Aluno
+def delete(request, raAluno):
+    aluno = Aluno.objects.get(ra_aluno = raAluno)
+    aluno.delete()
+    return render(request, 'TEMPLATE_NAME')
+
+# Atualizando Aluno View
+
+def update_view(request, raAluno):
+    aluno = Aluno.object.get(ra_aluno = raAluno)
+    return(request, 'TEMPLATE_NAME', 'aluno':aluno)
+
+# Atualizando Aluno Database
+
+def uprec(request, raAluno):
+    
+
+# Gerando Relatório XSLX
+
+# Enviando Email
+
+# Adicionando Professor
+def professores(request):
+    novo_professor = Professor()
+    novo_professor.nomeProfessor = request.POST.get('nomeProfessor')

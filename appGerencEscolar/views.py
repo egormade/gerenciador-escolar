@@ -13,3 +13,6 @@ def home(request):
 
 def turmas(request):
     return render(request, 'turmas.html')
+
+def cadastro(request):
+    return render(request, 'cadastroaluno.html')
