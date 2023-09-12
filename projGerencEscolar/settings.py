@@ -54,14 +54,6 @@ WSGI_APPLICATION = 'projGerencEscolar.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mytestdb',
-        'USER': 'root',
-        'PASSWORD': 'vole45@bol',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
 }
 
 
