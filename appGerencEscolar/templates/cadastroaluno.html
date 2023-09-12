@@ -36,36 +36,40 @@
         </div>
     </nav>
 
-    <form class="form-control">
+    <form class="form-control" action="{% %}" method="POST">
+        {% csrf_token %}
         <div class="form-group">
-          <label for="exampleInputEmail1">Nome do Aluno</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <label for="exampleInputEmail1">Nome do Aluno</label>
+            <input name="nome_aluno" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
         </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Data de Nascimento</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-
+    
+        <!-- <div class="form-group">
+            <label for="exampleInputPassword1">Data de Nascimento</label>
+            <input name="data_nascimento" type="password" class="form-control" id="exampleInputPassword1" placeholder="Data de Nascimento">
+        </div> -->
+    
         <div class="form-group">
             <label for="exampleInputPassword1">Telefone</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-
-          <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-
-          <div class="form-group">
-            <label for="exampleInputPassword1">Turma</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <input name="telefone_aluno" type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefone">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    
+        <div class="form-group">
+            <label for="exampleInputPassword1">Email</label>
+            <input name="email_aluno" type="text" class="form-control" id="exampleInputPassword1" placeholder="Email">
+        </div>
+    
+        <!-- <div class="form-group">
+            <label for="exampleInputPassword1">Turma</label>
+            <input name="turma" type="password" class="form-control" id="exampleInputPassword1" placeholder="Turma">
+        </div> -->
+    
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Confirma as informações acima</label>
+        </div><br />
+        <button type="submit" class="btn btn-primary">Cadastrar Aluno</button>
+    </form>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
