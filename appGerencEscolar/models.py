@@ -1,5 +1,6 @@
 from django.db import models
 
+<<<<<<< HEAD
 class Aluno(models.Model):
     idAluno = models.CharField(primary_key=True, max_length=4)
     raAluno = models.CharField(max_length=6)
@@ -17,3 +18,6 @@ class Professor(models.Model):
 class Turma(models.Model):
     idTurma = models.CharField(primary_key=True, max_length=4)
     nomeTurma = models.CharField(max_length=50)
+=======
+# Create your models here.
+>>>>>>> parent of 43fb61b (database created)

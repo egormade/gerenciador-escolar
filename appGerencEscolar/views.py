@@ -15,6 +15,7 @@ def signUp(request):
     return render(request, 'signUp.html')
 
 def home(request):
+<<<<<<< HEAD
     return render(request, 'home.html')
 
 def turmas(request):
@@ -64,3 +65,6 @@ def alunos(request):
     # # Definir o render
     # print("novo_aluno")
     # return render(request, 'templates/lin.html', alunos)
+=======
+    return render(request, 'home.html')
+>>>>>>> parent of 43fb61b (database created)
